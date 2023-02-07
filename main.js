@@ -12,7 +12,7 @@ given in the comments.
 
 const question1 = (myNumber) => {
   /////////// create your loop below this line ///////////
-
+  while (myNumber < 100) myNumber++;
   /////////// create your loop above this line ///////////
   return myNumber;
 };
@@ -26,7 +26,10 @@ const question1 = (myNumber) => {
 
 const question2 = (myNumber) => {
   /////////// create your loop below this line ///////////
-
+  while (myNumber > 0) {
+    myNumber--;
+    if (myNumber === 10) break;
+  }
   /////////// create your loop above this line ///////////
   return myNumber;
 };
@@ -47,7 +50,10 @@ const question2 = (myNumber) => {
 const question3 = (myString) => {
   let myValue;
   /////////// create your loop below this line ///////////
-
+  for(let i = 0; i < myString.length; i++) {
+    myValue = i;
+    if (myString.charAt(i) === "s" || myString.charAt(i) === "S") break;
+  }
   /////////// create your loop above this line ///////////
   return myValue;
 };
@@ -63,7 +69,10 @@ const question3 = (myString) => {
 
 const question4 = (myNumber) => {
   /////////// create your loop below this line ///////////
-
+  do {
+    if (myNumber === 3) myNumber += 4;
+    else myNumber += 2;
+  } while (myNumber < 5);
   /////////// create your loop above this line ///////////
   return myNumber;
 };
@@ -84,7 +93,11 @@ const question4 = (myNumber) => {
 const question5 = (myString) => {
   let myValue = "";
   /////////// create your loop below this line ///////////
-
+  for (let i = myString.length; i >= 0; i--) {
+    if(myString.charAt(i) !== ' ') myValue += myString.charAt(i);
+  }
+  myValue = myValue.trim();
+  myValue = myValue.toLowerCase();
   /////////// create your loop above this line ///////////
   return myValue;
 };
